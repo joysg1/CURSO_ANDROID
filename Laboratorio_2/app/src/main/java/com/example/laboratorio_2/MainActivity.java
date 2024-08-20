@@ -55,11 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(getApplicationContext(), "EL TOTAL ES "+resultado, Toast.LENGTH_LONG).show();
         
         
-                
 
-        
-        
-        
+
         
     }
 }
+
+/*   Joy Nelaton */
