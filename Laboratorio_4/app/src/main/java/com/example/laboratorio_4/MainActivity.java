@@ -1,5 +1,8 @@
 package com.example.laboratorio_4;
 
+import static java.lang.String.*;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -7,14 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.MessageFormat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnIr; /* Declaracion del boton */
+    Button btnIr;     /* Declaracion del boton */
+    Button btnDeterminar;
+    TextView InEdad;
+    TextView Resultado;
 
 
     @Override
@@ -23,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         Button btnIr = (Button)findViewById(R.id.btnIr);
+        Button btnDeterminar = (Button)findViewById(R.id.btnDeterminar);
+        TextView InEdad = (TextView)findViewById(R.id.InEdad);
+        TextView Resultado = (TextView)findViewById(R.id.Resultado);
         btnIr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
@@ -34,7 +45,36 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        btnDeterminar.setOnClickListener(new View.OnClickListener(){
+             @SuppressLint("SetTextI18n")
+             @Override
+            public void onClick (View v) {
+              String edadTexto = InEdad.getText().toString();
+              if (!edadTexto.isEmpty()){
 
+                  try {
+                  int aNacimiento = Integer.parseInt(edadTexto);
+                  int aActual = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+                  int edad = aActual - aNacimiento;
+                  Resultado.setText(MessageFormat.format("Edad {0}", edad));
+
+              } catch (NumberFormatException exception) {
+                   Resultado.setText("Por favor valide el dato ingresado: ");
+
+                 }
+
+             }
+
+              else {
+
+                  Resultado.setText("Por favor ingrese el dato solicitado: ");
+
+              }
+
+             }
+
+
+        });
 
 
 
