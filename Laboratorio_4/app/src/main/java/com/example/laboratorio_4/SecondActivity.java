@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 
 public class SecondActivity extends AppCompatActivity {
-    Button btnRegresar;
+    Button btnRegresar; // Declaracion de variables
     Button btnCalcular;
     TextView InCantidad;
     TextView Result;
@@ -25,10 +25,19 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_second);
-        Button btnRegresar = (Button)findViewById(R.id.btnRegresar);
+        Button btnRegresar = (Button)findViewById(R.id.btnRegresar); // Declaracion de widgets
         Button btnCalcular = (Button)findViewById(R.id.btnCalcular);
         TextView InCantidad = (TextView)findViewById(R.id.InCantidad);
         TextView Result = (TextView)findViewById(R.id.Result);
+
+        btnRegresar.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+            startActivity(intent);
+
+        });
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
