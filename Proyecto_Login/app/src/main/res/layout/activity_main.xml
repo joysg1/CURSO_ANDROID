@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/IconoUsuario"
+        android:layout_width="108dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="536dp"
+        android:contentDescription="IconoUsuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/user"
+        tools:ignore="HardcodedText,VisualLintBounds" />
+
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="263dp"
+        android:layout_height="86dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text|textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="263dp"
+        android:layout_height="86dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text|textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="201dp"
+        android:layout_height="73dp"
+        android:background="#FF0000"
+        android:backgroundTint="#E90A0A"
+        android:text="ENTRAR"
+        android:textColor="#ffffff"
+        android:textColorLink="#E40808"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="201dp"
+        android:layout_height="73dp"
+        android:background="#FF0000"
+        android:backgroundTint="#E90A0A"
+        android:text="REGISTRAR"
+        android:textColor="#ffffff"
+        android:textColorLink="#E40808"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
