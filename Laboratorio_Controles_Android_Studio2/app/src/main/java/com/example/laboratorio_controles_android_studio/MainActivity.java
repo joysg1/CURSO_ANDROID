@@ -33,15 +33,15 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar); // Asociacion del id con la variable progressBar
         progressBar.setProgress(25); // Establecemos el porcentaje de progreso al 25%
 
-        autoCompleteTextView = findViewById(R.id.editTextFacultad); // Asociacion del id con la variable autoCompleteTextView
+        autoCompleteTextView = findViewById(R.id.editTextCorreo); // Asociacion del id con la variable autoCompleteTextView
 
         String[] facultades = {"Sistemas", "Civil", "Industrial", "Eléctrica", "Ciencias y Tecnología", "Mecánica"}; // Array para las sugerencias de facultades
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, facultades);
         autoCompleteTextView.setAdapter(adapter);
 
-        nombre = findViewById(R.id.editTextCedula); // Asociacion de los ids con el editText
-        edad = findViewById(R.id.editTextFechaN);
+        nombre = findViewById(R.id.editTextTelefono); // Asociacion de los ids con el editText
+        edad = findViewById(R.id.editTextDirec);
         carrera = findViewById(R.id.editTextCarrera);
 
         boton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean validarCampos() {
+    private boolean validarCampos() {   //Validar que no se dejen los editText Vacios
         return !autoCompleteTextView.getText().toString().isEmpty() &&
                 !nombre.getText().toString().isEmpty() &&
                 !edad.getText().toString().isEmpty() &&

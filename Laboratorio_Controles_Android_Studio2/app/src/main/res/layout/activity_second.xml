@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/editTextCedula"
+        android:id="@+id/editTextTelefono"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -101,7 +101,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextFechaN"
+        android:id="@+id/editTextDirec"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"

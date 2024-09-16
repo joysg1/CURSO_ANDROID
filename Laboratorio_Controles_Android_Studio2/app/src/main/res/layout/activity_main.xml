@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.076" />
 
     <EditText
-        android:id="@+id/editTextCedula"
+        android:id="@+id/editTextTelefono"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -103,7 +103,7 @@
         tools:ignore="HardcodedText" />
 
     <AutoCompleteTextView
-        android:id="@+id/editTextFacultad"
+        android:id="@+id/editTextCorreo"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -132,7 +132,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextFechaN"
+        android:id="@+id/editTextDirec"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"

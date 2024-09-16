@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
     private Button boton2;
     private ProgressBar progressBar; // Declaracion de la variable para la barra de progreso
     private EditText fechaNac; //Declaracion de la variable fechaNac
+    private EditText cedula; //Declaracion de la variable edad
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,8 @@ public class SecondActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar); // Asociacion del progressBar con su id
         progressBar.setProgress(50); // Establecemos el progreso al 50%
 
-        fechaNac = findViewById(R.id.editTextFechaN); // Asociacion del id con la variable fechaNac
+        fechaNac = findViewById(R.id.editTextDirec); // Asociacion del id con la variable fechaNac
+        cedula = findViewById(R.id.editTextTelefono);
 
         fechaNac.addTextChangedListener(new TextWatcher() {
             @Override
@@ -72,8 +75,15 @@ public class SecondActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (validarCampos()) {
+
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
                 startActivity(intent);
+
+                } else {
+                    Toast.makeText(SecondActivity.this, "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show();
+                }
             }
         }); // Evento del boton que ira de vuelta al primer activity
 
@@ -81,8 +91,16 @@ public class SecondActivity extends AppCompatActivity {
         boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (validarCampos()) {
+
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 startActivity(intent);
+
+                }
+
+                else  {
+                        Toast.makeText(SecondActivity.this, "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show();
+                    }
             }
         }); // Evento del boton que ira al tecer activity
 
@@ -92,6 +110,16 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
+    private boolean validarCampos() {   //Validar que no se dejen los editText vacios
+        return
+                !cedula.getText().toString().isEmpty() &&
+                !fechaNac.getText().toString().isEmpty();
+
+    }
+
+
 }
 
-// Joy Nelaton - Josue Perez 
+// Joy Nelaton - Josue Perez
