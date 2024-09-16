@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,14 +13,17 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private Button  boton;
+    private Button  boton;  // Declaracion de la variable boton
+    private ProgressBar progressBar; // Declaracion de la variable progressBar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        boton = findViewById(R.id.Button_S3);
+        boton = findViewById(R.id.Button_S3); // Asociacion del id con la variable boton
+        progressBar = findViewById(R.id.progressBar); // Asociacion del id con la variable progressBar
+        progressBar.setProgress(25); // Establecemos el porcentaje de progreso al 25%
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
