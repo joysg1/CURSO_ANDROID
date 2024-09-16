@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/editTextSede"
+        android:id="@+id/editTextNombre"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -88,7 +88,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextAEstud"
+        android:id="@+id/editTextEdad"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
