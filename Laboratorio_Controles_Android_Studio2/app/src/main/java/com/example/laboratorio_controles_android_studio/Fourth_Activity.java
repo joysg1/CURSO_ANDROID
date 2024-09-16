@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,13 +13,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Fourth_Activity extends AppCompatActivity {
-    private Button boton; // Declaracion de la variable
+    private Button boton; // Declaracion de la variable para el boton
+    private ProgressBar progressBar; //Declaracion de la variable para la barra de progreso
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fourth);
         boton = findViewById(R.id.Button_A4); // Asociacion de la variable con el id del boton
+        progressBar = findViewById(R.id.progressBar); // Asociacion de la variable con el id del progressBar
+        progressBar.setProgress(100); // Establecemos el progreso al 100%
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
