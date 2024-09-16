@@ -27,14 +27,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_second);
-        boton = findViewById(R.id.Button_A4); // Asociacion de los botones con el respectivo id
-        boton2 = findViewById(R.id.Button_S2);
+        boton = findViewById(R.id.Button_01); // Asociacion de los botones con el respectivo id
+        boton2 = findViewById(R.id.Button_02);
 
         progressBar = findViewById(R.id.progressBar); // Asociacion del progressBar con su id
         progressBar.setProgress(50); // Establecemos el progreso al 50%
 
-        fechaNac = findViewById(R.id.editTextDirec); // Asociacion del id con la variable fechaNac
-        cedula = findViewById(R.id.editTextTelefono);
+        fechaNac = findViewById(R.id.editText2); // Asociacion del id con la variable fechaNac
+        cedula = findViewById(R.id.editText1);
 
         fechaNac.addTextChangedListener(new TextWatcher() {
             @Override

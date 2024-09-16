@@ -32,8 +32,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
 
-    <EditText
-        android:id="@+id/editTextTelefono"
+    <AutoCompleteTextView
+        android:id="@+id/editText1"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -42,40 +42,14 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581"
+        app:layout_constraintVertical_bias="0.61"
         tools:ignore="Autofill,HardcodedText,LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="63dp"
-        android:layout_height="33dp"
-        android:text="Año de estudio"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709"
-        tools:ignore="HardcodedText,TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sede"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588"
-        tools:ignore="HardcodedText" />
-
-    <EditText
-        android:id="@+id/editTextDirec"
+    <AutoCompleteTextView
+        android:id="@+id/editText2"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -84,14 +58,14 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706"
+        app:layout_constraintVertical_bias="0.742"
         tools:ignore="Autofill,HardcodedText,LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
 
     <RadioGroup
-        android:id="@+id/RadioGroupGenero"
+        android:id="@+id/RadioGroup1"
         android:layout_width="134dp"
         android:layout_height="174dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +112,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/Button_A4"
+        android:id="@+id/Button_01"
         android:layout_width="135dp"
         android:layout_height="75dp"
         android:text="ANTERIOR"

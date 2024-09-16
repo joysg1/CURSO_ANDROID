@@ -29,20 +29,20 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        boton = findViewById(R.id.Button_S3); // Asociacion del id con la variable boton
+        boton = findViewById(R.id.Button_002); // Asociacion del id con la variable boton
         progressBar = findViewById(R.id.progressBar); // Asociacion del id con la variable progressBar
         progressBar.setProgress(25); // Establecemos el porcentaje de progreso al 25%
 
-        autoCompleteTextView = findViewById(R.id.editTextCorreo); // Asociacion del id con la variable autoCompleteTextView
+        autoCompleteTextView = findViewById(R.id.editText3); // Asociacion del id con la variable autoCompleteTextView
 
         String[] facultades = {"Sistemas", "Civil", "Industrial", "Eléctrica", "Ciencias y Tecnología", "Mecánica"}; // Array para las sugerencias de facultades
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, facultades);
         autoCompleteTextView.setAdapter(adapter);
 
-        nombre = findViewById(R.id.editTextTelefono); // Asociacion de los ids con el editText
-        edad = findViewById(R.id.editTextDirec);
-        carrera = findViewById(R.id.editTextCarrera);
+        nombre = findViewById(R.id.editText1); // Asociacion de los ids con el editText
+        edad = findViewById(R.id.editText2);
+        carrera = findViewById(R.id.editText4);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override

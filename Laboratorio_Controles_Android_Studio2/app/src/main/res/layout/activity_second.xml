@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/editTextTelefono"
+        android:id="@+id/editText1"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -101,7 +101,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextDirec"
+        android:id="@+id/editText2"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -117,7 +117,7 @@
         tools:ignore="Autofill,HardcodedText,LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/Button_S2"
+        android:id="@+id/Button_02"
         android:layout_width="135dp"
         android:layout_height="75dp"
         android:text="SIGUIENTE"
@@ -130,7 +130,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/Button_A4"
+        android:id="@+id/Button_01"
         android:layout_width="135dp"
         android:layout_height="75dp"
         android:text="ANTERIOR"
@@ -143,7 +143,7 @@
         tools:ignore="HardcodedText" />
 
     <RadioGroup
-        android:id="@+id/RadioGroupGenero"
+        android:id="@+id/RadioGroup1"
         android:layout_width="134dp"
         android:layout_height="174dp"
         app:layout_constraintBottom_toBottomOf="parent"

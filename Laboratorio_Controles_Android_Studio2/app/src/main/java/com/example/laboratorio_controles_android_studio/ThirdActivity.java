@@ -26,14 +26,14 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_third);
-        boton = findViewById(R.id.Button_A3); // Asociacion de los botones con el respectivo id
-        boton2 = findViewById(R.id.Button_S3);
+        boton = findViewById(R.id.Button_001); // Asociacion de los botones con el respectivo id
+        boton2 = findViewById(R.id.Button_002);
         progressBar = findViewById(R.id.progressBar); // Asociacion del progressbar con el id
         progressBar.setProgress(75); // Establecemos el progreso al 75%
 
-        telefono = findViewById(R.id.editTextTelefono); // Asociacion de los edittexts con sus ids
-        direccion = findViewById(R.id.editTextDirec);
-        correo = findViewById(R.id.editTextCorreo);
+        telefono = findViewById(R.id.editText1); // Asociacion de los edittexts con sus ids
+        direccion = findViewById(R.id.editText2);
+        correo = findViewById(R.id.editText3);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
