@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, facultades);
         autoCompleteTextView.setAdapter(adapter);
 
-        nombre = findViewById(R.id.editTextNombre); // Asociacion de los ids con el editText
-        edad = findViewById(R.id.editTextEdad);
+        nombre = findViewById(R.id.editTextCedula); // Asociacion de los ids con el editText
+        edad = findViewById(R.id.editTextFechaN);
         carrera = findViewById(R.id.editTextCarrera);
 
         boton.setOnClickListener(new View.OnClickListener() {
@@ -70,3 +70,5 @@ public class MainActivity extends AppCompatActivity {
                 !carrera.getText().toString().isEmpty();
     }
 }
+
+// Joy Nelaton - Josue Perez

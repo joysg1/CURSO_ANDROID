@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.076" />
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/editTextCedula"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -104,7 +104,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextEdad"
+        android:id="@+id/editTextFechaN"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"

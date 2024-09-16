@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/editTextCedula"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -75,7 +75,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextEdad"
+        android:id="@+id/editTextFechaN"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -91,7 +91,7 @@
         tools:ignore="Autofill,HardcodedText,LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
 
     <RadioGroup
-        android:id="@+id/RadioGroupHorario"
+        android:id="@+id/RadioGroupGenero"
         android:layout_width="134dp"
         android:layout_height="174dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,21 +103,21 @@
         app:layout_constraintVertical_bias="0.384">
 
         <RadioButton
-            android:id="@+id/radioButtonDiurno"
+            android:id="@+id/radioButtonMasc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Diurno"
             tools:ignore="HardcodedText" />
 
         <RadioButton
-            android:id="@+id/radioButtonVespertino"
+            android:id="@+id/radioButtonFem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vespertino"
             tools:ignore="HardcodedText" />
 
         <RadioButton
-            android:id="@+id/radioButtonNocturno"
+            android:id="@+id/radioButtonOtro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nocturno"

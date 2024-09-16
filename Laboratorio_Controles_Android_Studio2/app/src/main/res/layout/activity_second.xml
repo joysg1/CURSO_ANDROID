@@ -20,6 +20,19 @@
         app:layout_constraintVertical_bias="0.022"
         tools:ignore="HardcodedText" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joy Nelaton - Josue Perez"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        tools:ignore="HardcodedText" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -33,7 +46,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/editTextCedula"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -88,12 +101,12 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextEdad"
+        android:id="@+id/editTextFechaN"
         android:layout_width="250dp"
         android:layout_height="64dp"
         android:ems="10"
-        android:hint="Ingrese su fecha de nacimiento"
-        android:inputType="datetime|date"
+        android:hint="dd/MM/AA"
+        android:inputType="datetime|time"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,10 +123,10 @@
         android:text="SIGUIENTE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
+        app:layout_constraintVertical_bias="0.943"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -126,11 +139,11 @@
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
+        app:layout_constraintVertical_bias="0.943"
         tools:ignore="HardcodedText" />
 
     <RadioGroup
-        android:id="@+id/RadioGroupHorario"
+        android:id="@+id/RadioGroupGenero"
         android:layout_width="134dp"
         android:layout_height="174dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,21 +155,21 @@
         app:layout_constraintVertical_bias="0.784">
 
         <RadioButton
-            android:id="@+id/radioButtonDiurno"
+            android:id="@+id/radioButtonMasc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Masculino"
             tools:ignore="HardcodedText" />
 
         <RadioButton
-            android:id="@+id/radioButtonVespertino"
+            android:id="@+id/radioButtonFem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Femenino"
             tools:ignore="HardcodedText" />
 
         <RadioButton
-            android:id="@+id/radioButtonNocturno"
+            android:id="@+id/radioButtonOtro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Otro"
