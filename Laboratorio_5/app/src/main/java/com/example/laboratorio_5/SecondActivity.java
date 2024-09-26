@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SecondActivity extends AppCompatActivity {
-    private Button botonSiguiente2;
+    private Button botonSiguiente2;  // Variables asociadas a los botones
     private Button botonAnterior2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,25 +20,25 @@ public class SecondActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_second);
 
-        botonSiguiente2 = findViewById(R.id.botonSiguiente2);
+        botonSiguiente2 = findViewById(R.id.botonSiguiente2); // Se asocia la variable con el id
 
         botonSiguiente2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 startActivity(intent);
-            }
+            } // Evento que nos permite movernos al activity siguiente
         });
 
 
-        botonAnterior2 = findViewById(R.id.botonAnterior2);
+        botonAnterior2 = findViewById(R.id.botonAnterior2); // Se asocia la variable con el id
 
         botonAnterior2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
+            } // Evento que nos permite movernos al activity anterior
         });
 
 
