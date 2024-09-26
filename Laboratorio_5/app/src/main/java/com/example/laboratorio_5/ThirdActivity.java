@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ThirdActivity extends AppCompatActivity {
     private Button botonAnterior3;
+    private Button botonInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,8 @@ public class ThirdActivity extends AppCompatActivity {
 
 
         botonAnterior3 = findViewById(R.id.botonAnterior3);
+        botonInfo = findViewById(R.id.botonInfo);
+
 
         botonAnterior3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +32,16 @@ public class ThirdActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        botonInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThirdActivity.this, WebActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
