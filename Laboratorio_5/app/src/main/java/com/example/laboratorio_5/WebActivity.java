@@ -25,6 +25,8 @@ public class WebActivity extends AppCompatActivity {
         botonCerrar = findViewById(R.id.botonCerrar);  // Identificamos las variables con los id
         Webview1 = findViewById(R.id.WebView1);
         Webview1.setWebViewClient(new WebViewClient()); // Agregar funcionalidad de navegación web dentro del app
+        Webview1.loadUrl("https://www.significados.com/colores-primarios/"); // Url que accede el Webview
+
 
         botonCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
