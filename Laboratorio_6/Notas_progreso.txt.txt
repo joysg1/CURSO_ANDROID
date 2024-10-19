@@ -1,0 +1,1 @@
+Validar porque se cierra la aplicación en el activity #1
