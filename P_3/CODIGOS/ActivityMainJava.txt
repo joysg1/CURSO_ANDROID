@@ -1,0 +1,259 @@
+package com.example.parcial_3_nelaton_j;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button btnSiguiente1;
+    private EditText nombre;
+    private EditText apellido;
+    private EditText fechaNac;
+    private RadioButton rButtonAnimal;
+    private RadioButton rButtonPlanta;
+    private RadioButton rButtonFungi;
+    private RadioButton rButtonProtista;
+    private RadioButton rButtonBacteria;
+    private WebView webView1;
+    private Button btnCierreWeb;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+        // Declaracion de variables y asociación con los id correspondientes
+        btnSiguiente1 = findViewById(R.id.btnSiguiente1);
+        btnCierreWeb = findViewById(R.id.btnCierreWeb);
+        nombre = findViewById(R.id.editTextNombre);
+        apellido = findViewById(R.id.editTextApellido);
+        fechaNac = findViewById(R.id.editTextFechaNac);
+
+        rButtonAnimal = findViewById(R.id.rButtonAnimal);
+        rButtonPlanta = findViewById(R.id.rButtonPlanta);
+        rButtonFungi = findViewById(R.id.rButtonFungi);
+        rButtonProtista = findViewById(R.id.rButtonProtista);
+        rButtonBacteria = findViewById(R.id.rButtonBacteria);
+
+
+
+        webView1 = findViewById(R.id.WebView1);
+        webView1.setWebViewClient( new WebViewClient() );
+        webView1.setVisibility(View.GONE);
+
+        btnCierreWeb.setVisibility(View.GONE);
+
+
+
+        // Asociacion del contenido del webview en funcion del radiobutton seleccionado
+        rButtonAnimal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    btnCierreWeb.setVisibility(View.VISIBLE);
+                    webView1.setVisibility(View.VISIBLE);
+                    webView1.loadUrl("https://www.nationalgeographicla.com/animales");
+
+
+                }
+            }
+        });
+
+
+        rButtonPlanta.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    webView1.setVisibility(View.VISIBLE);
+                    webView1.loadUrl("https://concepto.de/plantas/");
+                    btnCierreWeb.setVisibility(View.VISIBLE);
+
+
+                }
+            }
+        });
+
+
+        rButtonFungi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    webView1.setVisibility(View.VISIBLE);
+                    webView1.loadUrl("https://concepto.de/reino-fungi/");
+                    btnCierreWeb.setVisibility(View.VISIBLE);
+
+
+                }
+            }
+        });
+
+
+        rButtonProtista.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    webView1.setVisibility(View.VISIBLE);
+                    webView1.loadUrl("https://concepto.de/reino-protista/");
+                    btnCierreWeb.setVisibility(View.VISIBLE);
+
+
+                }
+            }
+        });
+
+
+
+        rButtonBacteria.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+
+                    webView1.setVisibility(View.VISIBLE);
+                    webView1.loadUrl("https://concepto.de/bacterias/");
+                    btnCierreWeb.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+
+
+
+
+
+        // Evento OnclikListener asociado al boton siguiente
+        btnSiguiente1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Iniciar la nueva actividad
+                Intent intent = new Intent(MainActivity.this, second.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        // Eevento asociado al boton de cerrar web, que hace invisible a tal widget
+
+        btnCierreWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                webView1.setVisibility(View.GONE);
+
+            }
+        });
+
+
+
+
+
+
+
+
+        // Agregar evento de cambio de texto en los campos
+        nombre.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                habilitarBoton();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        apellido.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                habilitarBoton();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        fechaNac.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                habilitarBoton();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        // Inicialmente deshabilitar el botón
+        btnSiguiente1.setEnabled(false);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.l), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+    private void habilitarBoton() {
+        String fecha = fechaNac.getText().toString();
+        if (!nombre.getText().toString().isEmpty() && !apellido.getText().toString().isEmpty() && !fecha.isEmpty()) {
+            try {
+                int año = Integer.parseInt(fecha);
+                if (año >= 1900 && año <= 2024) {
+                    btnSiguiente1.setEnabled(true);
+                } else {
+                    btnSiguiente1.setEnabled(false);
+                }
+            } catch (NumberFormatException e) {
+                btnSiguiente1.setEnabled(false);
+            }
+        } else {
+            btnSiguiente1.setEnabled(false);
+        }
+    }
+}
+
+
+// Joy Nelaton
